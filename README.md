@@ -117,7 +117,20 @@ You can change the list of [Galaxy](https://galaxy.ansible.com) modules, for thi
 Additionaly this lab has a custom ansible role called [`base`](./roles/base) which responsability is to install all the stuff
 needed by your box
 
-It is highly recommended to be able to work with the ansible project from outside the virtual machine, for which a workbench based on [pyenv](https://github.com/pyenv/pyenv) + [pipenv](https://pipenv.pypa.io/en/latest/) is provided, the details of work with this kind of environments are out of the scope of this documentation, please see the docs for those projects.
+It is highly recommended to be able to work with the ansible project from outside the virtual machine, for which a workbench based on [pyenv](https://github.com/pyenv/pyenv) + [pipenv](https://pipenv.pypa.io/en/latest/) is provided, the details of work with this kind of environments are out of the scope of this documentation, please see the docs for those projects, anyway here's a basic guide about how to start with these tools and the lab:
+  ```shell
+  # Select your pre-installed python interpreter, we recommend you to use 3.8
+  $ cd vagrant-ansible-lab
+  $ pyenv local 3.8.10
+  ```
+
+  ```shell
+  # Prepare the environment outsite the VM to work
+  $ cd vagrant-ansible-lab
+  $ pip install pipenv
+  $ pipenv install --dev
+  $ pipenv shell
+  ```
 
 If you need additional details about how to play with ansible + Vagrant this project has [good documenation](https://www.vagrantup.com/docs/provisioning/ansible_intro)
 
