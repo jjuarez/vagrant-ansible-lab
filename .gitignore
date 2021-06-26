@@ -1,7 +1,12 @@
 ### Ansible ###
 *.retry
+
+### Vagrant
 .vagrant/
+*.box
 
 # Log files (if you are creating logs in debug mode, uncomment this)
 *.log
-*.box
+
+### python
+.python-version
