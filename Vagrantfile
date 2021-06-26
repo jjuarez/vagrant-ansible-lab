@@ -34,17 +34,13 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
-  # bash Configurations
-  config.vm.provision :file, source: "provision/files/.bash_profile", destination: "/home/vagrant/.bash_profile"
-  config.vm.provision :file, source: "provision/files/.bashrc", destination: "/home/vagrant/.bashrc"
-
   config.vm.provision :shell, name: "ansible", path: "provision/scripts/ansible.sh"
 
   config.vm.provision :ansible_local do |ansible|
     ansible.verbose           = false
     ansible.playbook          = "playbook.yml"
     ansible.install_mode      = :default
-    ansible.config_file       = "provision/ansible/ansible.cfg"
+    ansible.config_file       = "ansible.cfg"
     ansible.galaxy_role_file  = "requirements.yml"
     ansible.galaxy_roles_path = "/etc/ansible/roles"
     ansible.galaxy_command    = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
