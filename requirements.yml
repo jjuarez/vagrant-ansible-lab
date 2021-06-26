@@ -1,4 +1,5 @@
 ---
 - src: geerlingguy.docker
+  version: 3.1.2
 - src: geerlingguy.nodejs
-- src: geerlingguy.pip
+  version: 5.1.1
