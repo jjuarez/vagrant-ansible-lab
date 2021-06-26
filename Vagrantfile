@@ -17,7 +17,7 @@ MESSAGE_EOF
 Vagrant.configure("2") do |config|
   config.vm.define "ansible-box"
 
-  config.vm.box         = "ubuntu/focal64"
+  config.vm.box         = $CONFIG['vagrant']['box']
   config.vm.box_version = $CONFIG['vagrant']['box_version']
   config.vm.hostname    = "ansible-box"
 
@@ -35,8 +35,8 @@ Vagrant.configure("2") do |config|
   end
 
   # bash Configurations
-  config.vm.provision "file", source: "provision/files/.bash_profile", destination: "/home/vagrant/.bash_profile"
-  config.vm.provision "file", source: "provision/files/.bashrc", destination: "/home/vagrant/.bashrc"
+  config.vm.provision :file, source: "provision/files/.bash_profile", destination: "/home/vagrant/.bash_profile"
+  config.vm.provision :file, source: "provision/files/.bashrc", destination: "/home/vagrant/.bashrc"
 
   config.vm.provision :shell, name: "ansible", path: "provision/scripts/ansible.sh"
 

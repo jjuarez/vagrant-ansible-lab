@@ -1,5 +1,6 @@
 ---
 vagrant:
+  box: "ubuntu/focal64"
   box_version: "20210610"
 vbx:
   memory: 4096
