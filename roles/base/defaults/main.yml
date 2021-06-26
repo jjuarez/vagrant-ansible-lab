@@ -1,2 +1,5 @@
 ---
+vagrant_user: "vagrant"
+vagrant_group: "vagrant"
+vagrant_home_dir: "/home/vagrant"
 base_package_list: []
