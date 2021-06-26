@@ -118,8 +118,10 @@ You can change the list of [Galaxy](https://galaxy.ansible.com) modules, for thi
 ...because the goal of this lab was to emulate one of my current work stacks, but feel free to use
 whatever you want making changes over [./requirements.yml](./requirements.yml) config file.
 
-Additionaly this lab has a custom ansible role called `base` which responsability is to install all the stuff
+Additionaly this lab has a custom ansible role called [`base`](./roles/base) which responsability is to install all the stuff
 needed by your box
+
+it is highly recommended to be able to work with the ansible project from outside the virtual machine, for which a workbench based on [pyenv](https://github.com/pyenv/pyenv) + [pipenv](https://pipenv.pypa.io/en/latest/) is provided, the details of work with this kind of environments are out of the scope of this documentation, please see the docs for those projects.
 
 ## Roadmap
 
@@ -144,7 +146,7 @@ Distributed under the MIT License. See [`LICENSE`](./LICENSE.txt) for more infor
 
 ## Contact
 
-Your Name - [@thejtoken](https://twitter.com/thejtoken) - email@example.com
+Your Name - [@thejtoken](https://twitter.com/thejtoken) - javier.juarez@gmail.com
 Project Link: [https://github.com/jjuarez/vagrant-ansible-lab](https://github.com/jjuarez/vagrant-ansible-lab)
 
 
