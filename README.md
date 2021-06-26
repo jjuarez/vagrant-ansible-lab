@@ -111,7 +111,6 @@ The example of use for this lab is extremely easy, just run the Virtual Machine
 
 You can change the list of [Galaxy](https://galaxy.ansible.com) modules, for this lab we're are using:
 
-  * [geerlingguy/pip](https://galaxy.ansible.com/geerlingguy/pip)
   * [geerlingguy/nodejs](https://galaxy.ansible.com/geerlingguy/nodejs)
   * [geerlingguy/docker](https://galaxy.ansible.com/geerlingguy/docker)
 
