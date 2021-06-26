@@ -49,16 +49,14 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-
-
-## About The Project
+## 📘 About The Project
 
 [![asciicast](https://asciinema.org/a/422439.png)](https://asciinema.org/a/422439)
 
 This project is just a lab to expermiment with the ansible local provider onver Vagrant VMs, and may to use it as some kind of template for other projects
 
 
-### Built With
+### 🛠 Built With
 
 The project in strongly based on these following tools:
 
@@ -70,7 +68,7 @@ The project in strongly based on these following tools:
   * [bash](https://www.gnu.org/software/bash/)
 
 
-## Getting Started
+## 🛫 Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
@@ -101,7 +99,7 @@ To work with this project you need to have installed [Vagrant](https://vagrantup
        cpus: 2
      ```
 
-## Usage
+## 🔌 Usage
 
 The example of use for this lab is extremely easy, just run the Virtual Machine
   ```shell
@@ -114,20 +112,21 @@ You can change the list of [Galaxy](https://galaxy.ansible.com) modules, for thi
   * [geerlingguy/nodejs](https://galaxy.ansible.com/geerlingguy/nodejs)
   * [geerlingguy/docker](https://galaxy.ansible.com/geerlingguy/docker)
 
-...because the goal of this lab was to emulate one of my current work stacks, but feel free to use
-whatever you want making changes over [./requirements.yml](./requirements.yml) config file.
+...because the goal of this lab was to emulate one of my current work stacks, but feel free to use whatever you want making changes over [./requirements.yml](./requirements.yml) config file.
 
 Additionaly this lab has a custom ansible role called [`base`](./roles/base) which responsability is to install all the stuff
 needed by your box
 
-it is highly recommended to be able to work with the ansible project from outside the virtual machine, for which a workbench based on [pyenv](https://github.com/pyenv/pyenv) + [pipenv](https://pipenv.pypa.io/en/latest/) is provided, the details of work with this kind of environments are out of the scope of this documentation, please see the docs for those projects.
+It is highly recommended to be able to work with the ansible project from outside the virtual machine, for which a workbench based on [pyenv](https://github.com/pyenv/pyenv) + [pipenv](https://pipenv.pypa.io/en/latest/) is provided, the details of work with this kind of environments are out of the scope of this documentation, please see the docs for those projects.
 
-## Roadmap
+If you need additional details about how to play with ansible + Vagrant this project has [good documenation](https://www.vagrantup.com/docs/provisioning/ansible_intro)
+
+## 🏘 Roadmap
 
 See the [open issues](https://github.com/jjuarez/vagrant-ansible-lab/issues) for a list of proposed features (and known issues).
 
 
-## Contributing
+## 🥼Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -138,12 +137,12 @@ Contributions are what make the open source community such an amazing place to b
   5. Open a Pull Request
 
 
-## License
+## 🔖 License
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE.txt) for more information.
 
 
-## Contact
+## ✉️ Contact
 
 Your Name - [@thejtoken](https://twitter.com/thejtoken) - javier.juarez@gmail.com
 Project Link: [https://github.com/jjuarez/vagrant-ansible-lab](https://github.com/jjuarez/vagrant-ansible-lab)
