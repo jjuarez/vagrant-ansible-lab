@@ -10,9 +10,13 @@ vbx:
 EOF
 
 class Config
+  def self.build_defaul_config_file()
+    root_dir = File.join(File.dirname(File.expand_path('..', __FILE__)))
+    File.join(root_dir, 'config', 'vm.yml')
+  end
+
   def self.load()
-    root_dir    = File.join(File.dirname(File.expand_path('..', __FILE__)))
-    config_file = File.join(root_dir, 'config', 'vm.yml')
+    config_file = Config.build_defaul_config_file
 
     if File.exist?(config_file)
       YAML.load_file(config_file)
