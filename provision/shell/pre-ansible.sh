@@ -21,7 +21,6 @@ install::pip() {
   apt-get update -qq
   apt-get install -yqq python3-pip
 
-  pip3 install --upgrade pip
   pip3 install ansible=="${ANSIBLE_VERSION}"
 }
 
