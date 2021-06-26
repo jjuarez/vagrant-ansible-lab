@@ -50,73 +50,102 @@
   </ol>
 </details>
 
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This project is just a lab to expermiment with the ansible local provider onver Vagrant VMs, and may to use it as some kind of template for other projects
 
+
 ### Built With
 
-The project in strongly based on the following tools
-* [Vagrant](https://www.vagrantup.com)
-* [Docker](https://www.docker.com)
-* [ansible](https://www.ansible.com/)
-* [Ubuntu](https://ubuntu.com/)
-* [bash](https://www.gnu.org/software/bash/)
+The project in strongly based on these following tools:
+
+  * [Vagrant](https://www.vagrantup.com)
+  * [Docker](https://www.docker.com)
+  * [ansible](https://www.ansible.com/)
+  * [Galaxy](https://galaxy.ansible.com/)
+  * [Ubuntu](https://ubuntu.com/)
+  * [bash](https://www.gnu.org/software/bash/)
+
 
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
+
 ### Prerequisites
 
 To work with this project you need to have installed [Vagrant](https://vagrantup.com) an its default providers, as you might know these are [VirtualBox](https://www.virtualbox.org/) and [Docker](https://docker.com/) for this specific use case
+
+
 ### Installation
 
-2. Install the software pre-requisites
-   
-2. Clone the repo
+  1. Install the software pre-requisites
+  2. Clone the repo
+     ```shell
+     git clone https://github.com/jjuarez/vagrant-ansible-lab.git
+     ```
+  3. Configure the resources to use for your Vitual Machine editing the configuration file `config/vm.yml`, here's and example of
+     this configuration:
 
-   ```shell
-   git clone https://github.com/jjuarez/vagrant-ansible-lab.git
-   ```
-
-3. Configure the resources to use for your Vitual Machine editing the configuration file `config/vm.yml`
+     ```yaml
+     ---
+     vagrant:
+       box: "ubuntu/focal64"
+       box_version: "20210610"
+     vbx:
+       memory: 4096
+       cpus: 2
+     ```
 
 ## Usage
 
 The example of use for this lab is extremely easy, just run the Virtual Machine
+  ```shell
+  vagrant up
+  ```
+### Configuration & Customization
 
-```shell
-vagrant up
-```
+You can change the list of [Galaxy](https://galaxy.ansible.com) modules, for this lab we're are using:
+
+  * [geerlingguy/pip](https://galaxy.ansible.com/geerlingguy/pip)
+  * [geerlingguy/nodejs](https://galaxy.ansible.com/geerlingguy/nodejs)
+  * [geerlingguy/docker](https://galaxy.ansible.com/geerlingguy/docker)
+
+...because the goal of this lab was to emulate one of my current work stacks, but feel free to use
+whatever you want making changes over [./requirements.yml](./requirements.yml) config file.
+
+Additionaly this lab has a custom ansible role called `base` which responsability is to install all the stuff
+needed by your box
 
 ## Roadmap
 
 See the [open issues](https://github.com/jjuarez/vagrant-ansible-lab/issues) for a list of proposed features (and known issues).
 
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+  1. Fork the Project
+  2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+  3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+  4. Push to the Branch (`git push origin feature/AmazingFeature`)
+  5. Open a Pull Request
+
 
 ## License
 
 Distributed under the MIT License. See [`LICENSE`](./LICENSE.txt) for more information.
 
+
 ## Contact
 
 Your Name - [@thejtoken](https://twitter.com/thejtoken) - email@example.com
-
 Project Link: [https://github.com/jjuarez/vagrant-ansible-lab](https://github.com/jjuarez/vagrant-ansible-lab)
-
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/jjuarez/vagrant-ansible-lab.svg?style=for-the-badge
