@@ -10,7 +10,7 @@
 
 - name: bashrc
   ansible.builtin.copy:
-    src: files/.bashrc
+    src: files/bash/bashrc
     dest: "{{vagrant_home_dir}}/.bashrc"
     owner: "{{vagrant_user}}"
     group: "{{vagrant_group}}"
@@ -21,7 +21,7 @@
 
 - name: bash_profile
   ansible.builtin.copy:
-    src: files/.bash_profile
+    src: files/bash/bash_profile
     dest: "{{vagrant_home_dir}}/.bash_profile"
     owner: "{{vagrant_user}}"
     group: "{{vagrant_group}}"
