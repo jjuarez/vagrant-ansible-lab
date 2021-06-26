@@ -15,6 +15,7 @@ MESSAGE_EOF
 
 
 Vagrant.configure("2") do |config|
+
   config.vm.define $CONFIG['vagrant']['name']
 
   config.vm.box         = $CONFIG['vagrant']['box']
@@ -24,7 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.33.10"
 
   config.vm.provider :virtualbox do |vb|
-    vb.name   = "devbox"
+    vb.name   = $CONFIG['vagrant']['name']
     vb.memory = $CONFIG['vbx']['memory']
     vb.cpus   = $CONFIG['vbx']['cpus']
 
@@ -33,13 +34,12 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
-  config.vm.provision :shell, name: "pre-ansible", path: "provision/scripts/pre-ansible.sh"
+  config.vm.provision :shell, name: "pre-ansible", path: "provision/shell/pre-ansible.sh"
   config.vm.provision :ansible_local do |ansible|
     ansible.verbose           = false
-    ansible.playbook          = "playbook.yml"
-    ansible.install_mode      = :default
-    ansible.config_file       = "ansible.cfg"
-    ansible.galaxy_role_file  = "requirements.yml"
+    ansible.config_file       = "provision/ansible/ansible.cfg"
+    ansible.playbook          = "provision/ansible/playbook.yml"
+    ansible.galaxy_role_file  = "provision/ansible/requirements.yml"
     ansible.galaxy_roles_path = "/etc/ansible/roles"
     ansible.galaxy_command    = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
   end
