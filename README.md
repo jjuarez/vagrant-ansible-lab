@@ -53,7 +53,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![asciicast](https://asciinema.org/a/422439.png)](https://asciinema.org/a/422439)
 
 This project is just a lab to expermiment with the ansible local provider onver Vagrant VMs, and may to use it as some kind of template for other projects
 
