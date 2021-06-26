@@ -4,7 +4,6 @@
   become: true
   roles:
     - base
-    - geerlingguy.pip
     - geerlingguy.nodejs
     - geerlingguy.docker
   vars:
