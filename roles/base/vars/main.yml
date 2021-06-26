@@ -1,0 +1,8 @@
+---
+base_package_list:
+  - apt-transport-https
+  - ca-certificates
+  - gnupg
+  - curl
+  - make
+  - gcc

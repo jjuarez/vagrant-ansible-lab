@@ -1,0 +1,9 @@
+---
+- name: Install base packages
+  package:
+    name: "{{ base_package_list }}"
+    update_cache: true
+    state: present
+  tags:
+    - base
+    - packages

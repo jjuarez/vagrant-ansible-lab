@@ -1,0 +1,14 @@
+---
+- name: The playbook for the Ansible-BOX
+  hosts: all
+  become: true
+  roles:
+    - base
+    - geerlingguy.pip
+    - geerlingguy.nodejs
+    - geerlingguy.docker
+  vars:
+    nodejs_version: "14.x"
+    nodejs_npm_global_packages: []
+    docker_users:
+      - vagrant
