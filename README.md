@@ -1,18 +1,9 @@
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 <br />
 
@@ -24,7 +15,7 @@
   <h3 align="center">Vagrant Ansible LAB</h3>
 
   <p align="center">
-    An Quikc lab using Vagrant and ansible local!
+    An Quick lab using Vagrant and ansible local!
     <br />
     <a href="https://github.com/jjuarez/vagrant-ansible-local/docs"><strong>Explore the docs »</strong></a>
     <br />
@@ -33,7 +24,6 @@
     ·
     <a href="https://github.com/jjuarez/vagrant-ansible-local/issues">Request Feature</a>
   </p>
-
 </p>
 
 <details open="open">
@@ -57,9 +47,9 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -141,4 +131,5 @@ Project Link: [https://github.com/jjuarez/vagrant-ansible-lab](https://github.co
 [license-url]: https://github.com/jjuarez/vagrant-ansible-lab/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/javierjuarez/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: docs/images/screenshot.png
+
