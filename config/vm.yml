@@ -6,3 +6,7 @@ vagrant:
 vbx:
   memory: 4096
   cpus: 2
+provision:
+  ansible:
+    version: "4.1.0"
+    verbose: "false"
