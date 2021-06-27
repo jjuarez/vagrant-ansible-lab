@@ -34,14 +34,15 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
-  config.vm.provision :shell, name: "pre-ansible", path: "provision/shell/pre-ansible.sh"
+  config.vm.provision :shell, name: "pre-ansible", path: "provision/shell/pre-ansible.sh", args: "#{$CONFIG['provision']['ansible']['version']}"
   config.vm.provision :ansible_local do |ansible|
-    ansible.verbose           = false
-    ansible.config_file       = "provision/ansible/ansible.cfg"
-    ansible.playbook          = "provision/ansible/playbook.yml"
-    ansible.galaxy_role_file  = "provision/ansible/requirements.yml"
-    ansible.galaxy_roles_path = "/etc/ansible/roles"
-    ansible.galaxy_command    = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
+    ansible.verbose            = $CONFIG['provision']['ansible']['verbose']
+    ansible.config_file        = "provision/ansible/ansible.cfg"
+    ansible.compatibility_mode = "2.0"
+    ansible.playbook           = "provision/ansible/playbook.yml"
+    ansible.galaxy_role_file   = "provision/ansible/requirements.yml"
+    ansible.galaxy_roles_path  = "/etc/ansible/roles"
+    ansible.galaxy_command     = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
   end
 
   config.vm.post_up_message = $POST_MESSAGE
