@@ -4,10 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-ansible      = "==2.9.6"
-ansible-lint = "==5.0.12"
+ansible      = "==4.1.0"
+cryptography = "*"
 
 [dev-packages]
+ansible-lint = "==5.0.12"
+yamllint     = "*"
+flake8       = "*"
 
 [requires]
 python_version = "3.8"

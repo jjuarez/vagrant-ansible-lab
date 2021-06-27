@@ -3,11 +3,15 @@
   hosts: all
   become: true
   roles:
-    - base
-    - geerlingguy.nodejs
+    - geerlingguy.ntp
     - geerlingguy.docker
+    - geerlingguy.nodejs
+
   vars:
-    nodejs_version: "14.x"
-    nodejs_npm_global_packages: []
     docker_users:
       - vagrant
+
+    nodejs_version: "14.x"
+    nodejs_npm_global_packages:
+      - name: lerna
+        version: 4.0.0
