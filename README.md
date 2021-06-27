@@ -97,6 +97,9 @@ To work with this project you need to have installed [Vagrant](https://vagrantup
      vbx:
        memory: 4096
        cpus: 2
+     ansible:
+       # Some ansible realted configurations...
+       ...
      ```
 
 ## 🔌 Usage
@@ -109,6 +112,7 @@ The example of use for this lab is extremely easy, just run the Virtual Machine
 
 You can change the list of [Galaxy](https://galaxy.ansible.com) modules, for this lab we're are using:
 
+  * [geerlingguy/ntp](https://galaxy.ansible.com/geerlingguy/ntp)
   * [geerlingguy/nodejs](https://galaxy.ansible.com/geerlingguy/nodejs)
   * [geerlingguy/docker](https://galaxy.ansible.com/geerlingguy/docker)
 
