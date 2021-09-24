@@ -49,6 +49,7 @@
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+
 ## 📘 About The Project
 
 [![asciicast](https://asciinema.org/a/422439.png)](https://asciinema.org/a/422439)
