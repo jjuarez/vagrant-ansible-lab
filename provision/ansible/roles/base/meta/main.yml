@@ -1,18 +1,18 @@
 ---
 galaxy_info:
+  role_name: base
   author: Javier Juarez
   description: A basic role to take care about some files and packages
   company: IBM Research
   issue_tracker_url: http://github.com/jjuarez/vagrant-ansible-lab/issues/
   license: MIT
-  min_ansible_version: 2.1
-  # min_ansible_container_version:
-
+  min_ansible_version: "2.4"
   platforms:
     - name: Ubuntu
       versions:
-        - 20.04
-
-  galaxy_tags: ["base", "common", "packages"]
-
+        - focal
+  galaxy_tags:
+    - base
+    - common
+    - packages
 dependencies: []
