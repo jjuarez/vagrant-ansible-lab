@@ -10,8 +10,4 @@
   vars:
     docker_users:
       - vagrant
-
-    nodejs_version: "14.x"
-    nodejs_npm_global_packages:
-      - name: lerna
-        version: 4.0.0
+    nodejs_version: "18.x"
