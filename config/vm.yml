@@ -2,10 +2,11 @@
 vagrant:
   name: "vagrant-ansible-lab"
   box: "ubuntu/focal64"
-  box_version: "20210610"
 vbx:
   memory: 4096
   cpus: 2
+  network:
+    ip: 192.168.56.10
 provision:
   ansible:
     version: "4.1.0"
