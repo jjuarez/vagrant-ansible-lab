@@ -2,31 +2,25 @@
 
 set -eu -o pipefail
 
-declare -r DEFAULT_ANSIBLE_VERSION="2.10.7"
-
-#
-# Package installation, for 2.9.x
-#
-install::package() {
-  apt-get update -qq
-  apt-get install -yqq software-properties-common
-  add-apt-repository -yqq --update ppa:ansible/ansible
-  apt-get install -y -qq ansible
-}
+declare -r DEFAULT_ANSIBLE_VERSION="7.2.0"
+ANSIBLE_VERSION="${1:-${DEFAULT_ANSIBLE_VERSION}}"
 
 #
 # PIP installation
 #
-install::pip() {
+pip::install() {
   apt-get update -qq
   apt-get install -yqq python3-pip
 
   pip3 install ansible=="${ANSIBLE_VERSION}"
 }
 
+pip::update() {
+  pip install --upgrade pip
+}
+
 #
 # ::main::
 #
-ANSIBLE_VERSION="${1:-${DEFAULT_ANSIBLE_VERSION}}"
-#install::package
-install::pip
+pip::install
+pip::update
