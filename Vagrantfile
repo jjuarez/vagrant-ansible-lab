@@ -19,10 +19,9 @@ Vagrant.configure("2") do |config|
   config.vm.define $CONFIG['vagrant']['name']
 
   config.vm.box         = $CONFIG['vagrant']['box']
-  config.vm.box_version = $CONFIG['vagrant']['box_version']
   config.vm.hostname    = $CONFIG['vagrant']['name']
 
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: $CONFIG['vbx']['network']['ip']
 
   config.vm.provider :virtualbox do |vb|
     vb.name   = $CONFIG['vagrant']['name']
